@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#123d2a">
+<title>Metro Green Farmer | Connect With Us</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,sans-serif;background:#f1f6f0;color:#173d2c;padding:24px 15px}
+.container{max-width:440px;margin:auto}
+.profile{background:white;border-radius:24px;overflow:hidden;box-shadow:0 12px 40px #153d2c18}
+.hero{background:linear-gradient(145deg,#123d2a,#28764a);color:white;text-align:center;padding:38px 20px}
+.logo{width:85px;height:85px;background:white;border-radius:50%;margin:0 auto 16px;display:grid;place-items:center;color:#17623b;font-size:26px;font-weight:bold;border:4px solid #c9e8ce}
+.hero h1{font-size:25px;margin-bottom:9px}
+.hero p{font-size:13px;color:#d6f3df}
+.content{padding:24px}
+.heading{font-size:13px;font-weight:bold;margin-bottom:15px;color:#65806d;letter-spacing:1px}
+.links{display:grid;gap:11px}
+.link{display:flex;align-items:center;gap:14px;padding:16px;text-decoration:none;border:1px solid #e6eee7;border-radius:13px;color:#173d2c;font-weight:bold;transition:.2s}
+.link:hover{background:#f0f8f0;transform:translateY(-2px)}
+.icon{font-size:24px}
+.link small{display:block;color:#819187;font-size:11px;font-weight:normal;margin-top:5px}
+.qr-section{background:#f3f8f2;margin-top:25px;border-radius:16px;text-align:center;padding:20px}
+#qrcode{display:flex;justify-content:center;margin:18px auto}
+#qrcode img{max-width:100%;height:auto}
+.download{background:#17643c;color:white;border:0;padding:13px 20px;border-radius:9px;cursor:pointer;font-weight:bold}
+footer{text-align:center;padding:20px 10px;font-size:12px;color:#819187}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="profile">
+<header class="hero">
+<div class="logo">MGF</div>
+<h1>Metro Green Farmer</h1>
+<p>Grow With Us. Stay Connected.</p>
+</header>
+<main class="content">
+<div class="heading">CONNECT WITH US</div>
+<div class="links">
+<a class="link" href="https://www.metrogreenfarmer.com/" target="_blank" rel="noopener">
+<span class="icon">🌐</span><span>Official Website<small>Explore our website</small></span>
+</a>
+<a class="link" href="https://www.instagram.com/mgf_gurugram/" target="_blank" rel="noopener">
+<span class="icon">📸</span><span>Instagram<small>@mgf_gurugram</small></span>
+</a>
+<a class="link" href="https://www.linkedin.com/company/metro-green-farmer/posts/" target="_blank" rel="noopener">
+<span class="icon">💼</span><span>LinkedIn<small>Follow our company</small></span>
+</a>
+<a class="link" href="https://wa.me/917505768071" target="_blank" rel="noopener">
+<span class="icon">💬</span><span>WhatsApp<small>Chat with our team</small></span>
+</a>
+<a class="link" href="tel:+917505768071">
+<span class="icon">📞</span><span>Call Us<small>+91 75057 68071</small></span>
+</a>
+<a class="link" href="mailto:sale@metrogreenfarmer.com">
+<span class="icon">✉️</span><span>Email Us<small>sale@metrogreenfarmer.com</small></span>
+</a>
+</div>
+<div class="qr-section">
+<h3>Share Our Digital Profile</h3>
+<p style="font-size:12px;margin-top:8px;color:#718276">Scan to connect with Metro Green Farmer</p>
+<div id="qrcode"></div>
+<button class="download" onclick="downloadQR()">Download QR Code</button>
+</div>
+</main>
+</div>
+<footer>© Metro Green Farmer. All Rights Reserved.</footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+const profileURL = "https://drpooja24eti96.github.io/scanner/";
+
+new QRCode(document.getElementById("qrcode"),{
+text:profileURL,
+width:220,
+height:220,
+colorDark:"#123d2a",
+colorLight:"#ffffff",
+correctLevel:QRCode.CorrectLevel.H
+});
+
+function downloadQR(){
+const canvas=document.querySelector("#qrcode canvas");
+if(!canvas){alert("Please wait for QR code to load.");return;}
+const a=document.createElement("a");
+a.download="Metro-Green-Farmer-QR.png";
+a.href=canvas.toDataURL("image/png");
+a.click();
+}
+</script>
+</body>
+</html>
